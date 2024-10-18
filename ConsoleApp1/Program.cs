@@ -11,37 +11,21 @@ internal class Program
         Console.WriteLine($"float size {sizeof(float)} min: {float.MinValue} max: {float.MaxValue}");
         Console.WriteLine($"long size {sizeof(long)} min: {long.MinValue} max: {long.MaxValue}");
 
-        string s = "abcd";
-        
-        byte[] b = new byte[8];
-        s+= "e";
-        char c = s[1];
-        s = s.Insert(0, "f");
+         List<int> list = new List<int>(10);
+        list.Add(10);
 
-        Console.WriteLine($"{s} - {b[7]}");
+         Console.WriteLine($"list - {string.Join(", ", list)}");
 
-        List<int> list = new List<int>();
+         Mylist list2 = new Mylist();
 
-        for (int j = 1; j <= 5; j++) 
-            list.Add(j);
-        
-        Console.WriteLine($"list - {string.Join(", ", list)}");
-        list.Remove(2);
-
-        
+         list2.Add(10);
+         list2.Add(15);
+         list2.Add(20);
+         list2.Add(25);
+         list2.Add(30);
+         list2.Print();
 
 
-
-        int i = 0;
-        long l = int.MaxValue;
-        i = (int)l;
-
-        object o = i;
-        i = (int)o;
-
-
-         //f(ref o); 
-        Console.WriteLine($"{o}");
 
 
     }
@@ -50,7 +34,7 @@ internal class Program
     //out обязательно присвоить значение переменной, также передаем ссылку
     //in переменную нельзя изменить
     
-    public static void f(in int i) 
+    public static void f(int i) 
     {
 
     }

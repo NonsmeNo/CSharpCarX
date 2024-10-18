@@ -7,12 +7,36 @@ public class Mylist
 
     public void Add(int item) 
     {
+        if (_count < _array.Length)
+        {
+            _array[_count] = item;
+            _count++;
+        }
+        else
+        {
+            Console.WriteLine($"The list is full, element {item} will not be added");
+        }
+    }
 
+    public void Print()
+    {
+        for (int i = 0; i < _array.Length; i++)
+            Console.Write(_array[i] + " ");
+        
+        Console.WriteLine();
     }
 
     public void Remove(int item) 
     {
-
+        bool f = false;
+        
+        for (int i = 0; i < _array.Length; i++)
+        {
+            if (_array[i] == item)
+            {
+               
+            }
+        }
     }
 
     public void RemoveAt(int index) 

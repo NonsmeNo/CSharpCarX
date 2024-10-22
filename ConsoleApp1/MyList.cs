@@ -66,7 +66,7 @@ public class MyList
             _array[i] = _array[i + lenghtRange];
         
         for (int i = _count - lenghtRange; i < _count; i++)
-            _array[i] = 0;
+            _array[i] = default;
 
         _count -= lenghtRange;
     }
@@ -94,7 +94,6 @@ public class MyList
         _count++;
     }
 
-
     public void Clear() 
     {
         while(_count > 0)
@@ -108,5 +107,4 @@ public class MyList
     {
         return string.Join(", ", _array.Take(_count));
     }
-    
 }

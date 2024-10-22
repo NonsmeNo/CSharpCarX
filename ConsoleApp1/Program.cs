@@ -57,6 +57,11 @@ internal class Program
         Console.WriteLine(list.ToString());
         Console.WriteLine();
 
+        Console.WriteLine("Удаление элементов со 2 по 15 индекс");
+        list.RemoveRange(2, 15);
+        Console.WriteLine(list.ToString());
+        Console.WriteLine();
+
         Console.WriteLine("Очищение списка");
         list.Clear();
         Console.WriteLine($"Список: {list.ToString()}");

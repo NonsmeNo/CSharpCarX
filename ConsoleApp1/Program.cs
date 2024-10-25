@@ -66,5 +66,50 @@ internal class Program
         list.Clear();
         Console.WriteLine($"Список: {list.ToString()}");
         Console.WriteLine();
+
+
+        // //работа с MyList2 (Generics)
+        MyList2<int> myList = new MyList2<int>();
+        
+        for (int i = 10; i >= 0; i--)
+            myList.Add(i*5);
+        
+        Console.WriteLine("Список: " + myList);
+        
+        // Удаление элемента по индексу
+        myList.RemoveAt(2); // Удаляет элемент 3
+        Console.WriteLine($"После удаления элемента по индексу 2: {myList} \n");
+        
+        // Удаление конкретного элемента
+        myList.Remove(4); // Удаляет элемент 4
+        Console.WriteLine($"После удаления элемента 4: {myList} \n");
+
+        // Удаление
+        myList.Remove(100); // Удаляет элемент 4
+        Console.WriteLine($"После удаления элемента 100: {myList} \n");
+        
+        // Вставка элемента
+        myList.Insert(1, 10); // Вставляет 10 на индекс 1
+        Console.WriteLine($"После вставки 10 на индекс 1: {myList} \n");
+        
+        // Поиск элемента
+        int index = myList.IndexOf(10);
+        Console.WriteLine($"Индекс элемента 10: {myList} \n");
+        
+        // Применение ForEach
+        myList.ForEach(i => Console.WriteLine($"Элемент: {i}"));
+        Console.WriteLine();
+
+        // Поиск с помощью предиката
+        int item = myList.Find(x => x == 0);
+        Console.WriteLine($"Найти первый элемент, который равен 0, вернуть индекс: {myList.IndexOf(item)} \n");
+
+        //Сортировка
+        myList.Sort((x1, x2) => x1.CompareTo(x2));
+        Console.WriteLine($"Список: {myList} \n");
+
+        // Очистка списка
+        myList.Clear();
+        Console.WriteLine($"После очистки списка: {myList} \n");
     }   
 }

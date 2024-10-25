@@ -103,10 +103,11 @@ internal class Program
         // Поиск с помощью предиката
         int item = myList.Find(x => x == 0);
         Console.WriteLine($"Найти первый элемент, который равен 0, вернуть индекс: {myList.IndexOf(item)} \n");
+        Console.WriteLine("Список: " + myList);
 
         //Сортировка
         myList.Sort((x1, x2) => x1.CompareTo(x2));
-        Console.WriteLine($"Список: {myList} \n");
+        Console.WriteLine($"Отсортированный писок: {myList} \n");
 
         // Очистка списка
         myList.Clear();

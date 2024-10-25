@@ -66,7 +66,8 @@ public class MyList2<TItem>
 
     public void RemoveRange(int index1, int index2)
     {
-        if (index1 < 0 || index2 >= _count || index1 > index2)
+        if (index1 > index2 || index1 < 0 || index1 >= _count ||
+         index2 < 0 || index2 >= _count)
         {
             Console.WriteLine("Некорректный индекс");
             return;
